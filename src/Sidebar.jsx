@@ -75,7 +75,7 @@ const Sidebar = () => {
            <NavLink
   className="content1"
   exact
-  to="/flood  "
+  to="/flood1"
   activeClassName="activeClicked"
   style={{
     textDecoration: "none",
@@ -106,7 +106,7 @@ const Sidebar = () => {
             <NavLink
   className="content1"
   exact
-  to="/water"
+  to="/water1"
   activeClassName="activeClicked"
   style={{
     textDecoration: "none",
@@ -143,7 +143,7 @@ const Sidebar = () => {
 <NavLink
   className="content1"
   exact
-  to="/mosq"
+  to="/air1"
   activeClassName="activeClicked"
   style={{
     textDecoration: "none",
@@ -172,7 +172,7 @@ const Sidebar = () => {
 <NavLink
   className="content1"
   exact
-  to="/mosq"
+  to="/noise1"
   activeClassName="activeClicked"
   style={{
     textDecoration: "none",
@@ -185,7 +185,7 @@ const Sidebar = () => {
   <CDBSidebarMenuItem className="content">
     <img
       src={noice}
-      alt="Example"
+      alt ="Example"
       style={{
         maxWidth: "100%",
         maxHeight: "100%",
@@ -199,33 +199,33 @@ const Sidebar = () => {
 </NavLink>
 
 <NavLink
-  className="content1"
-  exact
-  to="/mosq"
-  activeClassName="activeClicked"
-  style={{
-    textDecoration: "none",
-    color: "inherit",
-    marginBottom: "10px",
-    transition: "background-color 0.3s",
-  }}
-  activeStyle={{ backgroundColor: "#333" }}
->
-  <CDBSidebarMenuItem className="content">
-    <img
-      src={mosq}
-      alt="Example"
+      className="content1"
+      exact
+      to="/mosq1" // Link to the "/mosq" route
+      activeClassName="activeClicked"
       style={{
-        maxWidth: "100%",
-        maxHeight: "100%",
-        width: "25px",
-        height: "25px",
-        marginRight: "10px", // Add right margin for spacing
+        textDecoration: 'none',
+        color: 'inherit',
+        marginBottom: '10px',
+        transition: 'background-color 0.3s',
       }}
-    />
-    Mosquito
-  </CDBSidebarMenuItem>
-</NavLink>
+      activeStyle={{ backgroundColor: '#333' }}
+    >
+      <CDBSidebarMenuItem className="content">
+        <img
+          src={mosq}
+          alt="Example"
+          style={{
+            maxWidth: '100%',
+            maxHeight: '100%',
+            width: '25px',
+            height: '25px',
+            marginRight: '10px',
+          }}
+        />
+        Mosquito
+      </CDBSidebarMenuItem>
+    </NavLink>
 
           </CDBSidebarMenu>
         </CDBSidebarContent>
