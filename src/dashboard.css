@@ -27,9 +27,23 @@ body{
     border: none;
     padding: 0.5rem;
     color: white;
-    
     border-radius: 1rem;
     background-color: #131313;
-    padding-left: 30px; /* Space for the icon */
+    padding-left: 30px; 
     width: 14rem;
+}
+
+.text-paragraph {
+  color:white;
+  font-size: 10px;
+   margin-left: 3.5rem;
+  margin-top: auto; 
+}
+.text-dashbaord{
+  color: white;
+  font-size: 2rem;
+}
+
+.profile{
+  height: 2rem;
 }
