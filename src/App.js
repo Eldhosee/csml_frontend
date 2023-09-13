@@ -1,19 +1,22 @@
+
+
+
 import './App.css';
-import React from 'react';
-import DividePage from './components/Dividepage';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import  Graph from './graph';
+import Home from './Homepage.jsx';
+import Graph from './Graph';
 
 function App() {
   return (
-    <div className="article-container">
-      <div className="article">
-        <h3>title1</h3>
-        <p>article1</p>
-      </div>
-      <div className="article">
-        <h3>title2</h3>
-        <p>article2</p>
-      </div>
+    <div >
+      {/* <Graph  /> */}
+      <Home />
+      
     </div>
+    
+
   );
 }
 
