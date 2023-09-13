@@ -1,6 +1,9 @@
 import React from "react";
 import mosq from "./components/images/mosq.png";
 import water from "./components/images/water.png";
+import flood from "./components/images/flood.png"
+import air from "./components/images/air.png"
+import noice from "./components/images/noice.png"
 import {
   CDBSidebar,
   CDBSidebarContent,
@@ -84,7 +87,7 @@ const Sidebar = () => {
 >
   <CDBSidebarMenuItem className="content">
     <img
-      src={mosq}
+      src={flood}
       alt="Example"
       style={{
         maxWidth: "100%",
@@ -134,7 +137,68 @@ const Sidebar = () => {
 
 
             
-           <NavLink
+           
+
+
+<NavLink
+  className="content1"
+  exact
+  to="/mosq"
+  activeClassName="activeClicked"
+  style={{
+    textDecoration: "none",
+    color: "inherit",
+    marginBottom: "10px",
+    transition: "background-color 0.3s",
+  }}
+  activeStyle={{ backgroundColor: "#333" }}
+>
+  <CDBSidebarMenuItem className="content">
+    <img
+      src={air}
+      alt="Example"
+      style={{
+        maxWidth: "100%",
+        maxHeight: "100%",
+        width: "25px",
+        height: "25px",
+        marginRight: "10px", // Add right margin for spacing
+      }}
+    />
+    Air Pollution
+  </CDBSidebarMenuItem>
+</NavLink>
+
+<NavLink
+  className="content1"
+  exact
+  to="/mosq"
+  activeClassName="activeClicked"
+  style={{
+    textDecoration: "none",
+    color: "inherit",
+    marginBottom: "10px",
+    transition: "background-color 0.3s",
+  }}
+  activeStyle={{ backgroundColor: "#333" }}
+>
+  <CDBSidebarMenuItem className="content">
+    <img
+      src={noice}
+      alt="Example"
+      style={{
+        maxWidth: "100%",
+        maxHeight: "100%",
+        width: "25px",
+        height: "25px",
+        marginRight: "10px", // Add right margin for spacing
+      }}
+    />
+    Noise Pollution
+  </CDBSidebarMenuItem>
+</NavLink>
+
+<NavLink
   className="content1"
   exact
   to="/mosq"
@@ -163,28 +227,6 @@ const Sidebar = () => {
   </CDBSidebarMenuItem>
 </NavLink>
 
-
-            <NavLink
-              exact
-              to="/air"
-              activeClassName="activeClicked"
-              className="content1"
-            >
-              <CDBSidebarMenuItem className="content" icon="user">
-                Air Pollution
-              </CDBSidebarMenuItem>
-            </NavLink>
-
-            <NavLink
-              exact
-              to="/noise"
-              activeClassName="activeClicked"
-              className="content1"
-            >
-              <CDBSidebarMenuItem className="content" icon="chart-line">
-                Noise Pollution
-              </CDBSidebarMenuItem>
-            </NavLink>
           </CDBSidebarMenu>
         </CDBSidebarContent>
 
