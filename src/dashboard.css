@@ -1,0 +1,35 @@
+body{
+    background-color: #010101;
+}
+.dashboard{
+    display: flex;
+    overflow:hidden;
+}
+
+.search-container {
+    position: relative;
+    margin: 2rem;
+    border-radius: 4px;
+    padding: 8px;
+   
+  }
+
+  .search-icon {
+    position: absolute;
+    margin-left: 0.4rem;
+    left: 1.3rem;
+    top: 1.8rem;
+    transform: translateY(-50%);
+    color: #888;
+  }
+
+  .search-input {
+    border: none;
+    padding: 0.5rem;
+    color: white;
+    
+    border-radius: 1rem;
+    background-color: #131313;
+    padding-left: 30px; /* Space for the icon */
+    width: 14rem;
+}
