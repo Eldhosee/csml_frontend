@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
-import { firestore } from './firebase';
+// import { firestore } from './firebase';
 import { AreaChart, Area, XAxis, YAxis, Tooltip, CartesianGrid, defs, linearGradient } from 'recharts';
 import './graph.css';
 
@@ -9,10 +9,11 @@ export default function Graph() {
   const [loading, setLoading] = useState(true);
 
   // Define your Firestore collection query here
-  const query = firestore.collection('noise'); // Replace with your collection name
+  // const query = firestore.collection('noise'); // Replace with your collection name
 
   // Use the useCollectionData hook to fetch Firestore data
-  const [queryData] = useCollectionData(query, { idField: 'data' });
+  // const [queryData] = useCollectionData(query, { idField: 'data' });
+  const queryData = null    
 
   useEffect(() => {
     if (queryData) {

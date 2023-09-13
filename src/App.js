@@ -40,7 +40,7 @@ function App() {
     </Routes>
   </Router>
       {/* <Graph  /> */}
-      <Home />
+      {/* <Home /> */}
       
     </div>
    
