@@ -8,16 +8,46 @@ Chart.register(CategoryScale);
 const AirPage = () => {
 
   const [data, setData] = useState([])
+  const [graphData, setGraphData] = useState({
+    x: "0",
+    y: "0",
+    label: 'Label 1'
+  })
 
   useEffect(() => {
-    fetch('https://io.adafruit.com/api/v2/CSML/feeds?x-aio-key=aio_GcaG30uxH9N1Ij3CbUxmPzGCwzLb')
+    fetch('https://io.adafruit.com/api/v2/CSML/feeds?x-aio-key=aio_excY74jMUZvPXOPE9mo2VHrKA72s')
       .then(response => response.json()) // Assuming the API returns JSON data
-      .then(data => {
-        // Assuming 'data' is an array of numeric values (e.g., [1, 2, 3, 4, 5])
-        setData(data)
+      .then(apiData => {
+
+        // setData(prevData => [
+        //   ...prevData.map((d, index) => {
+        //     return {
+        //       x: index === 0 ? "0" : (prevData[index - 1]?.y || "0"),
+        //       y: apiData[index]?.last_value || "0"
+        //     };
+        //   }),
+
+        apiData.sort((a, b) => new Date(a.updated_at) - new Date(b.updated_at));
+
+
+        setData(prevData => [
+          ...prevData.map((d, index) => {
+            return {
+              x: apiData[index]?.updated_at,
+              y: apiData[index]?.last_value,
+              label: 'Label 1'
+            };
+          }),
+          ...apiData.slice(prevData.length).map(d => ({
+            x: (prevData[prevData.length - 1]?.y || "0"),
+            y: d.last_value
+          }))
+        ]);
+        
+
       })
 
-    console.log(data)
+    
   }, [])
 
   // useEffect(() => {
@@ -44,11 +74,7 @@ const AirPage = () => {
     <div className='airPageStyle'>
       <h1><center>Air page</center></h1>
 
-      {data.map((d) => (
-        <>
-          {d.name !== "parameters" && <Graph label={d.key} value={d.last_value}/>}
-        </>
-      ))}
+      <Graph data={data}/>
     </div>
 
 

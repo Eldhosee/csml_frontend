@@ -4,20 +4,20 @@ import { Line } from "react-chartjs-2";
 import { CategoryScale, Chart } from "chart.js/auto";
 Chart.register(CategoryScale);
 
-const AirPage = ({value, label}) => {
+const AirPage = ({data}) => {
 
 
-
+    console.log(data);
 
     const lineState = {
         labels: ["Initial Amount", "Amount Earned"],
         datasets: [
             {
-                label: label,
+                label: "Air",
                 backgroundColor: ["#FF21CBE2"],
                 hoverBackgroundColor: ["rgb(197, 72, 49)"],
                 borderColor: ["#FF21CBE2"],
-                data: [0, value],
+                data: data,
             },
         ],
     };
